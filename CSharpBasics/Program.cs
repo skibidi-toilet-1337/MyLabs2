@@ -6,7 +6,6 @@ namespace myApp {
       int a, n, result;
       int x, n2;
 
-      // First task
       Console.Write("First task\nEnter a: ");
       a = Convert.ToInt32(Console.ReadLine());
 
@@ -16,7 +15,6 @@ namespace myApp {
       result = pow(a, n);
       Console.WriteLine("Your result: " + result + "\n");
 
-      //Second task
       while (true) {
         Console.Write("Second task\nEnter x (x >= 100): ");
         x = Convert.ToInt32(Console.ReadLine());
@@ -32,27 +30,25 @@ namespace myApp {
 
     }
 
-    static int pow(int a, int n) {
-      int powResult = 1;
+     static int pow(int a, int n) {
+        int powResult = 1;
 
-      for (int iteration = 0; iteration < n; ++iteration) {
-        powResult *= a;
+        for (int iteration = 0; iteration < n; ++iteration) {
+          powResult *= a;
       }
-      return powResult;
+        return powResult;
     }
+      static int newNum(int x) {
+        string strX;
+        char secondDigit;
+        string newNumber;
 
-    static int newNum(int x) {
-      string strX;
-      char secondDigit;
-      string newNumber;
+        strX = x.ToString();
+        secondDigit = strX[1];
+        newNumber = strX.Remove(1, 1);
+        newNumber += secondDigit;
 
-      strX = x.ToString();
-      secondDigit = strX[1];
-      newNumber = strX.Remove(1, 1);
-      newNumber += secondDigit;
-
-      return Convert.ToInt32(newNumber);
+        return Convert.ToInt32(newNumber);
     }
-
   }
 }
