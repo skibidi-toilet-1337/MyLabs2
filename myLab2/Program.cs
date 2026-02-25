@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace myLab2 {
   internal class Program {
     static void Main(string[] args) {
-      Animal animal = new Animal();
+      Animal animal = new Fish();
       animal.age = 10;
       animal.nickname = "Skibidi";
 

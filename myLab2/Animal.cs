@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace myLab2 {
-  internal class Animal {
+  public abstract class Animal {
     public string nickname = " ";
     public int age = 0;
     public string habitat = " ";

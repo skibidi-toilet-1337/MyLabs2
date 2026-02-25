@@ -8,10 +8,13 @@ namespace myLab2 {
   public sealed class AnimalManager {
     private static AnimalManager instance = null;
     private static readonly object padlock = new object();
-
+    private static List<Animal> animalList;
     AnimalManager() {
-      List<Animal> list = new List<Animal>();
+      animalList = new List<Animal>();
+    }
 
+    public void addAnimal (Animal animal) {
+      animalList.Add(animal);
     }
 
     public static AnimalManager Instance {
