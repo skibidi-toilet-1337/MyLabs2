@@ -19,7 +19,7 @@ namespace myLab2 {
       mammal.nickname = "Lala";
 
       AnimalManager.Instance.addAnimal(mammal);
-      AnimalManager.Instance.showAnimals();
+      //AnimalManager.Instance.showAnimals();
       //AnimalManager.Instance.showAnimalByIndex(1);
 
       string option, strIndex;
@@ -48,7 +48,6 @@ namespace myLab2 {
             return;
         }
       }
-      Console.ReadKey();
     }
   }
 }

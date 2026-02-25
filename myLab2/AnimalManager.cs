@@ -32,7 +32,23 @@ namespace myLab2 {
       Console.Write("Select option: ");
     }
     public void addAnimalManually() {
+      Console.WriteLine("Select type:\n0: Mammal\n1: Bird\n2: Fih\n3: Amphibian\n4: Reptile");
+      string selectedType = Console.ReadLine();
 
+      Console.Write("Nickname: ");
+      string nickname = Console.ReadLine();
+
+      Console.Write("Age: ");
+      string age = Console.ReadLine();
+
+      Console.Write("Habitat: ");
+      string habitat = Console.ReadLine();
+
+      Console.Write("Food type: ");
+      string foodType = Console.ReadLine();
+
+      Console.Write("Color: ");
+      string Color = Console.ReadLine();
     }
 
     public static AnimalManager Instance {
