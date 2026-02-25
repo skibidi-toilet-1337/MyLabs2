@@ -39,7 +39,10 @@ namespace myLab2 {
       string nickname = Console.ReadLine();
 
       Console.Write("Age: ");
-      string age = Console.ReadLine();
+      int age = 0;
+      if (int.TryParse(Console.ReadLine(), out int inAge)) { 
+        age = inAge;
+      }
 
       Console.Write("Habitat: ");
       string habitat = Console.ReadLine();
@@ -48,9 +51,44 @@ namespace myLab2 {
       string foodType = Console.ReadLine();
 
       Console.Write("Color: ");
-      string Color = Console.ReadLine();
-    }
+      string color = Console.ReadLine();
 
+      switch (selectedType) {
+        case "0":
+          Console.Write("Has fur? Type Y: ");
+          bool hasFur = Console.ReadLine().ToLower() == "y";
+          addAnimal(new Mammal(nickname, age, habitat, foodType, color, hasFur));
+          break;
+
+        case "1":
+          Console.Write("Wing span in meters: ");
+          float wingSpan = 0;
+          if (float.TryParse(Console.ReadLine(), out float inWingSpan)) {
+            wingSpan = inWingSpan;
+          }
+
+          addAnimal(new Bird(nickname, age, habitat, foodType, color, wingSpan));
+          break;
+
+        case "2":
+          Console.Write("Water type: ");
+          string waterType = Console.ReadLine();
+          addAnimal(new Fish(nickname, age, habitat, foodType, color, waterType));
+          break;
+
+        case "3":
+          Console.Write("Skin moisture in points (0 to inf): ");
+          int skinMoisture = int.Parse(Console.ReadLine());
+          addAnimal(new Amphibian(nickname, age, habitat, foodType, color, skinMoisture));
+          break;
+
+        case "4":
+          Console.Write("Is venomous? Type Y: ");
+          bool isVenomous = Console.ReadLine().ToLower() == "y";
+          addAnimal(new Reptile(nickname, age, habitat, foodType, color, isVenomous));
+          break;
+      }
+    }
     public static AnimalManager Instance {
       get {
         lock (padlock) {

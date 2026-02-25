@@ -10,5 +10,8 @@ namespace myLab2 {
     public override void GetInfo() {
       Console.WriteLine($"Nickname: {nickname}, Age: {age}, Habitat: {habitat}, Food type: {foodType}, Color: {color}, is Venomous: {isVenomous}");
     }
+    public Reptile(string nickname, int age, string habitat, string foodType, string color, bool isVenomous) : base(nickname, age, habitat, foodType, color) {
+      this.isVenomous = isVenomous;
+    }
   }
 }

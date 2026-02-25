@@ -10,5 +10,9 @@ namespace myLab2 {
     public override void GetInfo() {
       Console.WriteLine($"Nickname: {nickname}, Age: {age}, Habitat: {habitat}, Food type: {foodType}, Color: {color}, Wing span: {wingSpan}");
     }
+
+    public Bird(string nickname, int age, string habitat, string foodType, string color, float wingSpan) : base(nickname, age, habitat, foodType, color) {
+      this.wingSpan = wingSpan;
+    }
   }
 }
