@@ -22,11 +22,32 @@ namespace myLab2 {
       AnimalManager.Instance.showAnimals();
       //AnimalManager.Instance.showAnimalByIndex(1);
 
+      string option, strIndex;
+
       while (true) {
         AnimalManager.Instance.showMenu();
+        option = Console.ReadLine();
 
+        switch (option) {
+          case "0":
+            AnimalManager.Instance.showAnimals();
+            break;
+          case "1":
+            Console.Write("Enter index: ");
+            strIndex = Console.ReadLine();
+            if (int.TryParse(strIndex, out int index)) {
+              AnimalManager.Instance.showAnimalByIndex(index);
+            } else {
+              Console.WriteLine("Wrong index!!!");
+            }
+              break;
+          case "2":
+            AnimalManager.Instance.addAnimalManually();
+            break;
+          case "3":
+            return;
+        }
       }
-
       Console.ReadKey();
     }
   }

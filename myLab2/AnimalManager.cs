@@ -30,7 +30,9 @@ namespace myLab2 {
     public void showMenu() {
       Console.WriteLine("Menu:\n0: Show animals\n1: Show animal by index\n2: Add new animal\n3: Exit");
       Console.Write("Select option: ");
-      //Console.WriteLine();
+    }
+    public void addAnimalManually() {
+
     }
 
     public static AnimalManager Instance {
