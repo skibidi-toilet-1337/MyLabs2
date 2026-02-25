@@ -20,6 +20,12 @@ namespace myLab2 {
 
       AnimalManager.Instance.addAnimal(mammal);
       AnimalManager.Instance.showAnimals();
+      //AnimalManager.Instance.showAnimalByIndex(1);
+
+      while (true) {
+        AnimalManager.Instance.showMenu();
+
+      }
 
       Console.ReadKey();
     }

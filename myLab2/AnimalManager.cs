@@ -13,7 +13,7 @@ namespace myLab2 {
       animalList = new List<Animal>();
     }
 
-    public void addAnimal (Animal animal) {
+    public void addAnimal(Animal animal) {
       animalList.Add(animal);
     }
 
@@ -21,6 +21,16 @@ namespace myLab2 {
       foreach (Animal animal in animalList) {
         animal.GetInfo();
       }
+    }
+
+    public void showAnimalByIndex(int index) {
+      animalList[index].GetInfo();
+    }
+
+    public void showMenu() {
+      Console.WriteLine("Menu:\n0: Show animals\n1: Show animal by index\n2: Add new animal\n3: Exit");
+      Console.Write("Select option: ");
+      //Console.WriteLine();
     }
 
     public static AnimalManager Instance {
