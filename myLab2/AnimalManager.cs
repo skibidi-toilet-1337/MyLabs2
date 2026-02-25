@@ -24,7 +24,11 @@ namespace myLab2 {
     }
 
     public void showAnimalByIndex(int index) {
-      animalList[index].GetInfo();
+      if (index >=0 && index < animalList.Count) {
+        animalList[index].GetInfo();
+      } else {
+        Console.WriteLine("Incorrect index. Try again");
+      }
     }
 
     public void showMenu() {
