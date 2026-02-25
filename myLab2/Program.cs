@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 namespace myLab2 {
   internal class Program {
     static void Main(string[] args) {
-      Animal animal = new Fish();
+      Fish animal = new Fish();
       animal.age = 10;
       animal.nickname = "Skibidi";
+      animal.waterType = "salty";
+      AnimalManager.Instance.addAnimal(animal);
 
       Mammal mammal = new Mammal();
       mammal.hasFur = true;
       mammal.age = 20;
       mammal.nickname = "Lala";
-      animal.GetInfo();
-      mammal.GetInfo();
+
+      AnimalManager.Instance.addAnimal(mammal);
+      AnimalManager.Instance.showAnimals();
+
+      Console.ReadKey();
     }
   }
 }

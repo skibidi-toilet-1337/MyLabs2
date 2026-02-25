@@ -13,7 +13,6 @@ namespace myLab2 {
     public string color = " ";
     public virtual void GetInfo() {
       Console.WriteLine($"Nickname: {nickname}, Age: {age}, Habitat: {habitat}, Food type: {foodType}, Color: {color}");
-      Console.ReadKey();
     }
   }
 }

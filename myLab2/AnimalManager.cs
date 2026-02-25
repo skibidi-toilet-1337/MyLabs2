@@ -17,6 +17,12 @@ namespace myLab2 {
       animalList.Add(animal);
     }
 
+    public void showAnimals() { 
+      foreach (Animal animal in animalList) {
+        animal.GetInfo();
+      }
+    }
+
     public static AnimalManager Instance {
       get {
         lock (padlock) {

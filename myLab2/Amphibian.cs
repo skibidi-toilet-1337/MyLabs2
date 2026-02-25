@@ -9,7 +9,6 @@ namespace myLab2 {
     public int skinMoisture;
     public override void GetInfo() {
       Console.WriteLine($"Nickname: {nickname}, Age: {age}, Habitat: {habitat}, Food type: {foodType}, Color: {color}, Skin moisture: {skinMoisture}");
-      Console.ReadKey();
     }
   }
 }

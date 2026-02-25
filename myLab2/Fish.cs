@@ -9,7 +9,6 @@ namespace myLab2 {
     public string waterType;
     public override void GetInfo() {
       Console.WriteLine($"Nickname: {nickname}, Age: {age}, Habitat: {habitat}, Food type: {foodType}, Color: {color}, Water type: {waterType}");
-      Console.ReadKey();
     }
   }
 }
