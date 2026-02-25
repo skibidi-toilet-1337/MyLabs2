@@ -28,7 +28,7 @@ namespace myLab2 {
     }
 
     public void showMenu() {
-      Console.WriteLine("Menu:\n0: Show animals\n1: Show animal by index\n2: Add new animal\n3: Exit");
+      Console.WriteLine("\nMenu:\n0: Show animals\n1: Show animal by index\n2: Add new animal\n3: Exit\n");
       Console.Write("Select option: ");
     }
     public void addAnimalManually() {
@@ -40,11 +40,13 @@ namespace myLab2 {
 
       Console.Write("Age: ");
       int age = 0;
-      if (int.TryParse(Console.ReadLine(), out int inAge)) { 
+      if (int.TryParse(Console.ReadLine(), out int inAge)) {
         age = inAge;
+      } else {
+        Console.WriteLine("Wrong value. The default value is set.");
       }
 
-      Console.Write("Habitat: ");
+        Console.Write("Habitat: ");
       string habitat = Console.ReadLine();
 
       Console.Write("Food type: ");
@@ -65,6 +67,8 @@ namespace myLab2 {
           float wingSpan = 0;
           if (float.TryParse(Console.ReadLine(), out float inWingSpan)) {
             wingSpan = inWingSpan;
+          } else {
+            Console.WriteLine("Wrong value. The default value is set.");
           }
 
           addAnimal(new Bird(nickname, age, habitat, foodType, color, wingSpan));
@@ -78,7 +82,12 @@ namespace myLab2 {
 
         case "3":
           Console.Write("Skin moisture in points (0 to inf): ");
-          int skinMoisture = int.Parse(Console.ReadLine());
+          int skinMoisture = 0;
+          if (int.TryParse(Console.ReadLine(), out int inSkinMoisture)) {
+            skinMoisture = inSkinMoisture;
+          } else {
+            Console.WriteLine("Wrong value. The default value is set.");
+          }
           addAnimal(new Amphibian(nickname, age, habitat, foodType, color, skinMoisture));
           break;
 

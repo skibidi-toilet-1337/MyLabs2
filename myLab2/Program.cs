@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 namespace myLab2 {
   internal class Program {
     static void Main(string[] args) {
+      string option, strIndex;
+      //Test animals
       Fish animal = new Fish("Skibidi", 1, "water", "coral","red","salt");
       AnimalManager.Instance.addAnimal(animal);
 
       Mammal mammal = new Mammal("Lala", 10, "plains", "fern", "brown", true);
       AnimalManager.Instance.addAnimal(mammal);
 
-      string option, strIndex;
-
       while (true) {
         AnimalManager.Instance.showMenu();
         option = Console.ReadLine();
+        Console.WriteLine("");
 
         switch (option) {
           case "0":
