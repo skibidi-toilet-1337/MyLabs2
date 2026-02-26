@@ -13,6 +13,6 @@ namespace myLab2 {
     public Amphibian(string nickname, int age, string habitat, string foodType, string color, int skinMoisture) : base(nickname, age, habitat, foodType, color) { 
       this.skinMoisture = skinMoisture;
     }
-
   }
 }
+
